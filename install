@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo "Start installing conky-theme"
+cp template conkyrc
+echo "Copying conkyrc template"
+echo "Writing load BTC current price command"
+echo "Writing load ETH current price command"
+echo "Writing load LTC current price command"
+mv conkyrc ~/.conkyrc
+echo "Moving conkyrc"
+echo "done."
+conky
