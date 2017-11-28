@@ -1,0 +1,56 @@
+# Conky settings #
+background no
+update_interval 1
+double_buffer yes
+no_buffers yes
+
+# Window specifications #
+own_window yes
+own_window_transparent yes 
+own_window_argb_visual yes 
+own_window_class override
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+minimum_size 100
+
+# Alignment #
+alignment tr
+gap_x 30
+gap_y 100
+
+border_inner_margin 15
+border_outer_margin 0
+
+# Graphics settings #
+draw_shades no
+draw_outline no
+draw_borders no
+draw_graph_borders no
+
+# Text settings #
+use_xft yes
+xftalpha 0
+xftfont Forque:size=10
+
+override_utf8_locale no
+imlib_cache_size 0
+
+# Color scheme #
+default_color 666666
+
+color1 006E09
+color2 9933CC
+color3 669900
+color4 FF4800
+color5 CC0000
+color6 AAAAAA
+color7 DDDDDD
+
+
+TEXT
+${image ~/conky-cryptoTrio/btc.png -p 50,0 -s 40x40}${voffset 25}
+${font Forque:size=12}${alignc}${execi 300 echo "1 BTC = $(curl -s https://api.coinbase.com/v2/prices/btc-usd/spot -H 'CB-VERSION: 2015-04-08' | jq -r ".data.amount" | sed -E 's/(.+)/$\1/')" }${font}${voffset 25}
+${image ~/conky-cryptoTrio/eth.png -p 50,80 -s 40x40}${voffset 20}
+${font Forque:size=12}${alignc}${execi 300 echo "1 ETH = $(curl -s https://api.coinbase.com/v2/prices/eth-usd/spot -H 'CB-VERSION: 2015-04-08' | jq -r ".data.amount" | sed -E 's/(.+)/$\1/')"}${font}${voffset 25}
+${image ~/conky-cryptoTrio/ltc.png -p 50,160 -s 40x40}${voffset 15}
+${font Forque:size=12}${alignc}${execi 300 echo "1 LTC = $(curl -s https://api.coinbase.com/v2/prices/ltc-usd/spot -H 'CB-VERSION: 2015-04-08' | jq -r ".data.amount" | sed -E 's/(.+)/$\1/')"}${font}
