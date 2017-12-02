@@ -33,3 +33,6 @@ This project was inspired by the following:
 * [google-now-themed-conky-for-ubuntu-desktop](http://www.omgubuntu.co.uk/2013/05/google-now-themed-conky-for-ubuntu-desktop)
 * [conky-finance](https://github.com/alseambusher/conky-finance)
 * [Coinbase](https://developers.coinbase.com/)
+
+The icons used are from [Cryptocurrency Icons](https://dribbble.com/shots/3513187-Cryptocurrency-Icons), by [Christopher Downer](https://dribbble.com/cjdowner)
+
